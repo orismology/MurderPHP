@@ -17,4 +17,4 @@ a whole bunch of existing PHP functions so that they're more gruesome.
 
 ## Changelog
 
-* 12/11/14 - Added print_ahh() and amputate(), fixed murder() to avoid blank <marquee>
+* 12/11/14 - Added print_ahh() and amputate(), fixed murder() to avoid blank marquee and blink tags
