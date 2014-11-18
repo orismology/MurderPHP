@@ -36,7 +36,7 @@ function print_ahh($expression, $return = false ){
 }
 
 function amputate($string,$start,$length){
-	if(isset($length)){
+	if(is_numeric($length) && is_numeric($start)){ //~ad we should be checking for a number where numbers are required
 		substr($string,$start,$length);
 	}else{
 		substr($string,$start);
