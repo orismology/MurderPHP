@@ -25,9 +25,9 @@ function murder($murder = null){
  		 // Should probably think about changing this from marquee and blink to css3 animations
 }
 
-// A quieter version, accepts no parameters
-function assassinate(){
-  murder();
+// Kill script with PHP error
+function assassinate($message,$type){
+  trigger_error($message,$type);
 }
 
 // Because we can't have ! in function names, ahh by itself will have to do
@@ -39,7 +39,7 @@ function amputate($string,$start,$length){
 	if(is_numeric($length) && is_numeric($start)){ //~ad we should be checking for a number where numbers are required
 		substr($string,$start,$length);
 	}else{
-		substr($string,$start);
+		assassinate('amputate() requires a minimum of 2 parameters, one string and one numeric.', E_USER_ERROR);
 	}
 }
 ?>
