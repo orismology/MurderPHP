@@ -35,8 +35,8 @@ function print_ahh($expression, $return = false ){
 	print_r($expression, $return);
 }
 
-function amputate($string,$start,$length){
-	if(is_numeric($length) && is_numeric($start)){ //~ad we should be checking for a number where numbers are required
+function amputate($string='',$start=0,$length=NULL){ //~ad catch incase we don't have parameters specified.
+	if($string!="" && is_numeric($length) && is_numeric($start)){ //~ad we should be checking for a number where numbers are required
 		substr($string,$start,$length);
 	}else{
 		assassinate('amputate() requires a minimum of 2 parameters, one string and one numeric.', E_USER_ERROR);
